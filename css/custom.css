@@ -51,3 +51,13 @@ footer img, img.sponsor {
     height: 60px;
     margin: 30px;
 }
+
+.committee li {
+	list-style-type: none;
+}
+
+.committee li img {
+	height: 90px;
+	margin-right: 1em;
+	margin-bottom: 1em;
+}
