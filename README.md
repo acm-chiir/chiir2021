@@ -1,6 +1,6 @@
-# ADCS2018
+# CHIIR 2019
 
-Website content for the official site of the Australasian Document Computing Symposium, 11-12 December 2018, Dunedin, New Zealand.
+Website content for the official site of the CHIIR Conference, dates... , Canberra, Australia.
 
 Built primarly with Twitter Bootstrap.
 
