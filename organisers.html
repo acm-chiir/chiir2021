@@ -1,0 +1,133 @@
+﻿<!DOCTYPE html>
+<!-- saved from url=(0043)http://getbootstrap.com/examples/offcanvas/ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- <link rel="icon" href="http://getbootstrap.com/favicon.ico"> -->
+
+    <title>CHIIR 2021</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/offcanvas.css" rel="stylesheet">
+    <link href="css/custom.css" rel="stylesheet">
+
+    <script src="js/jquery.min.js"></script> 
+    <script> 
+    $(function(){
+      $("#navbarContent").load("navbar.html"); 
+      $("#sidebarContent").load("sidebar.html"); 
+      $("#footerContent").load("footer.html");
+    });
+    </script>
+  </head>
+
+  <body>
+    <nav class="navbar navbar-fixed-top navbar-inverse">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+        <div id="navbarContent"></div>
+      </div><!-- /.container -->
+    </nav><!-- /.navbar -->
+
+    <div class="container">
+
+      <div class="row row-offcanvas row-offcanvas-right">
+
+        <div class="col-xs-12 col-sm-8">
+          <p class="pull-right visible-xs">
+            <button type="button" class="btn btn-primary btn-xs" data-toggle="offcanvas">Toggle sidebar</button>
+          </p>
+          
+          <div class="row">
+              <div class="col-xs-12 col-sm-12 committee">
+                  <h2>Organising Committee</h2>
+                  <p>Introducing the organising committee for CHIIR 2021.</p>
+
+                  <h3>General Chairs</h3>
+                  <ul>
+                      <li><img src="img/falk.png" />Falk Scholer, RMIT University, <a href="mailto:falk.scholer@rmit.edu.au">falk.scholer@rmit.edu.au</a></li>
+                      <li><img src="img/paul.png" />Paul Thomas, Microsoft, <a href="mailto:pathom@microsoft.com">pathom@microsoft.com</a></li>
+                  </ul>
+
+                  <h3>Programme Chairs</h3>
+                  <ul>
+                      <li><img src="img/david.png" />David Elsweiler, University of Regensburg</li>
+                      <li><img src="img/noriko.png" />Noriko Kando, National Institute of Informatics</li>
+                      <li><img src="img/cathy.png" />Cathy Smith, Kent State University</li>
+                  </ul>
+
+                  <h3>Short Communications Chairs</h3>
+                  <ul>
+                      <li><img src="img/laurianne.png" />Laurianne Sitbon, Queensland University of Technology</li>
+                      <li><img src="img/morgan.png" />Morgan Harvey, University of Sheffield</li>
+                  </ul>
+
+                  <h3>Workshops and Tutorials Chairs</h3>
+                  <ul>
+                      <li><img src="img/henry.png" />Henry Feild, Endicott College</li>
+                      <li><img src="img/dana.png" />Dana McKay, University of Melboure</li>
+                  </ul>
+
+                  <h3>Doctoral Consortium Chairs</h3>
+                  <ul>
+                      <li><img src="img/katriina.png" />Katriina Bystrom, Oslo Metropolitan University</li>
+                      <li><img src="img/guido.png" />Guido Zuccon, Queensland University of Technology</li>
+                  </ul>
+
+                  <h3>Special Session Chair</h3>
+                  <ul>
+                      <li><img src="img/matt.png" />Matt Adcock, CSIRO</li>
+                  </ul>
+
+                  <h3>Sponsorships Chair</h3>
+                  <ul>
+                      <li><img src="img/damiano.png" />Damiano Spina, RMIT University</li>
+                  </ul>
+
+                  <h3>Publicity Chair</h3>
+                  <ul>
+                      <li><img src="img/johanne.png" />Johanne Trippas, University of Melbourne</li>
+                  </ul>
+
+              </div><!--/.col-xs-6.col-lg-4-->
+            
+          </div><!--/row-->
+        </div><!--/.col-xs-12.col-sm-9-->
+
+       <div id="sidebarContent"></div>
+      </div><!--/row-->
+
+      <hr>
+
+      <div id="footerContent"></div>
+
+    </div><!--/.container-->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="js/ie10-viewport-bug-workaround.js"></script>
+
+    <script src="js/offcanvas.js"></script>
+  
+
+</body></html>
