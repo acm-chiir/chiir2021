@@ -1,6 +1,6 @@
-# CHIIR 2019
+# CHIIR 2021
 
-Website content for the official site of the CHIIR Conference, dates... , Canberra, Australia.
+Website content for the official site of the CHIIR Conference, 15-19 March 2021, Canberra, Australia.
 
 Built primarly with Twitter Bootstrap.
 
