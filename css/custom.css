@@ -6,27 +6,33 @@ img.keynote {
 	margin-right: 10px;
 }
 
-.jumbotron {
-	
+.titleblock {
+	text-align: center
 }
 
-.jumbotron h1 {
-	color: white;
+.titleblock img {
+	max-height: 20em;
+	max-width: 100%;
+	padding: 1em;
+}
+
+.titleblock h1 {
 	margin-top: 20px;
-	margin-bottom: 130px;
-
+	margin-bottom: 20px;
 	letter-spacing: -1px;
-  line-height: 60px;
-  font-weight: 200;
-  text-shadow: 0 1px 0 black;
+    line-height: 60px;
+    font-weight: 200;
 }
 
-
+.titleblock .welcome {
+	font-size: 25px;
+	font-weight: 400;
+}
 
 p.welcome {
 	font-size: 25px;
-	color: white;
 	font-weight: 400;
+	color: #00843D;
 	/*text-shadow: 0 1px 0 black;*/
 }
 
