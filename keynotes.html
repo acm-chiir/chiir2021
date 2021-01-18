@@ -1,0 +1,114 @@
+﻿<!DOCTYPE html>
+<!-- saved from url=(0043)http://getbootstrap.com/examples/offcanvas/ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- <link rel="icon" href="http://getbootstrap.com/favicon.ico"> -->
+
+    <title>CHIIR 2021</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/offcanvas.css" rel="stylesheet">
+    <link href="css/custom.css" rel="stylesheet">
+
+    <script src="js/jquery.min.js"></script>
+    <script>
+    $(function(){
+      $("#navbarContent").load("navbar.html");
+      $("#sidebarContent").load("sidebar.html");
+      $("#footerContent").load("footer.html");
+    });
+    </script>
+
+  </head>
+
+  <body>
+    <nav class="navbar navbar-fixed-top navbar-inverse">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+        <div id="navbarContent"></div>
+      </div><!-- /.container -->
+    </nav><!-- /.navbar -->
+
+    <div class="container">
+
+      <div class="row row-offcanvas row-offcanvas-right">
+
+        <div class="col-xs-12 col-sm-8">
+          <p class="pull-right visible-xs">
+            <button type="button" class="btn btn-primary btn-xs" data-toggle="offcanvas">Toggle sidebar</button>
+          </p>
+
+          <div class="row">
+              <div class="col-xs-12 col-sm-12">
+                  <h2>Keynotes</h2>
+
+
+                  <h3>Title: The Case for Scrutable, Personal, Long-Term User Models for Information Retrieval</h3>
+
+                  <p>
+                      Abstract: Information retrieval systems are a ubiquitous part of people’s daily lives. The personalised services of such systems are driven by user models that are typically built from data collected from large numbers of people. There is a growing demand that we build such “intelligent systems” in ways that ensure the user can understand and control them. This is the spirit of legislation across many countries, such as the European Union General Data Protection Regulation (GDPR). Essentially, this reflects people’s demand to control their own data and its use.
+                  </p>
+                  <p>
+                      The talk presents my work and vision to meet this demand by the systematic design and creation of scrutable personalised systems. I will explain the rationale for scrutability – where systems are designed, from their very foundations, so that people can scrutinise them to understand and control how their personal data is captured and transformed into a user model and used in personalised smart systems. I will argue the importance of understanding the three very different definitions of user models across research communities of (1) human-computer interaction, (2) large scale personalisation such as information retrieval and (3) personal user models that have been a mainstay of intelligent tutoring systems.  I will discuss how all three fit with human aspects of information retrieval and argue the need for more work on personalised user models, including ones that support client-side personalisation, in combination with more conventional approaches. I will discuss the challenges of the dealing with the uncertainty that is the norm in much user modelling and personalisation and share decades of experience in building interfaces to support scrutability and user control and work that explores challenges of long-term personal data.
+
+                  </p>
+                  <h4>Speaker: Judy Kay, The University of Sydney, Sydney, Australia</h4>
+                  <p>
+                      Bio: Judy Kay is Professor of Computer Science and Payne-Scott Distinguished Professor at the University of Sydney. She leads the Human Centred Technology Research Cluster, a large multi-disciplinary group. A core focus of her research has been to create infrastructures and interfaces for scrutable user models and personalisation. This began with formal learning contexts and grew to encompass lifelong and life-wide learning that makes use of diverse sensors from the user’s personal eco-system of devices. Her work has been integrated into diverse forms of interaction including virtual reality, surface computing, wearables and ambient displays. Her research has been commercialised and deployed and she has extensive publications in leading venues for user modelling, AIED, human computer interaction and ubicomp. She has held many leadership roles in these research communities and is an Advisory Board member of ACM Transaction on Intelligent Interactive Systems (TiiS), Editorial Board member of User Modeling and User-Adapted Interaction (UMUAI), Editor-in-Chief of the IJAIED, International Journal of Artificial Intelligence in Education (IJAIED), and Editor of IMWUT, Interactive Mobile Wearable and Ubiquitous Technology (IMWUT).
+                  </p>
+
+                  <h3>Title: "Now You're Speaking My Language": Towards a Seamless Localized Product Experience</h3>
+                  <p>
+                      Abstract: Increased internet access and improvements in localization processes means that more people have access to information and entertainment than ever before. However, many people still find it difficult to navigate online and offline resources in their preferred language. In this talk, I will describe some of the challenges people face using streaming services and consuming video content in different languages. I will present research on the challenges we’ve uncovered at Netflix and how we’ve approached addressing questions around members’ language experience. These examples demonstrate how moving away from an English-centric experience can benefit a global audience.
+                  </p>
+                  <h4>Speaker: Ashlee Edwards, Netflix, Los Gatos, CA, USA</h4>
+
+                  <p>
+                      Bio: Ashlee Edwards is a Senior Product Researcher at Netflix leading research efforts for accessibility, localization, and creative innovation. While at Instagram, her  work focused on growing and engaging Instagram’s user base, crafting a safe and comfortable space for teens on the platform, and understanding international markets. Prior to working in industry, Ashlee's academic research centered around understanding engagement and frustration  with search systems and interactive information retrieval. She's written extensively about user experience strategy, including how to share research creatively and measure user engagement, and her research has been highlighted in publications including Bloomberg News. Her past work has also covered topics including online disclosure of sensitive information, using physiological signals to predict user emotional state, and reducing workload in stressful interactions. See <a href="https://aedwards.rocks" target="_blank">https://aedwards.rocks</a> for more information.
+                  </p>
+
+                  
+
+              </div><!--/.col-xs-6.col-lg-4-->
+
+          </div><!--/row-->
+        </div><!--/.col-xs-12.col-sm-9-->
+
+       <div id="sidebarContent"></div>
+      </div><!--/row-->
+
+      <hr>
+
+      <div id="footerContent"></div>
+
+    </div><!--/.container-->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="js/ie10-viewport-bug-workaround.js"></script>
+
+    <script src="js/offcanvas.js"></script>
+
+
+</body></html>
