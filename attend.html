@@ -19,6 +19,48 @@
     <link href="css/custom.css" rel="stylesheet">
 
     <script src="js/jquery.min.js"></script>
+    <!-- calendar -->
+    <link href="https://cdn.jsdelivr.net/npm/fullcalendar@5.5.1/main.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.5.1/main.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var calendarEl = document.getElementById('calendar');
+            let calendar = new FullCalendar.Calendar(calendarEl, {
+//                plugins: [googleCalendarPlugin],
+                initialView: 'timeGridSixDay',
+                headerToolbar: false,
+                initialDate: '20210315',
+                timezone: 'local',
+                eventTimeFormat: { 
+                    hour: '2-digit',
+                    minute: '2-digit',
+                    hour12: false,
+                    meridiem: false
+                },
+                dayHeaderFormat: {
+                    weekday: 'short',
+                    day: 'numeric',
+                    month: 'short'
+                },
+                googleCalendarApiKey: 'AIzaSyDnQMqoRUsesESMph4J0krHSWZ6D45o1BA',
+                events: {
+                    googleCalendarId: 'rpn3js9cg8g91v1ba7njkr70uk@group.calendar.google.com'
+                },
+                views: {
+                    timeGridSixDay: {
+                        type: 'timeGrid',
+                        duration: { days: 6 },
+                        buttonText: '6 days',
+                        allDaySlot: false
+                    }
+                },
+                eventClick: function (info) {
+                    info.jsEvent.preventDefault();
+                }
+            });
+            calendar.render();
+        });
+    </script>
     <script>
     $(function(){
       $("#navbarContent").load("navbar.html");
@@ -57,35 +99,41 @@
               <div class="col-xs-12 col-sm-12">
                   <h2>Attend CHIIR 2021</h2>
 
-                  <p><strong>Registration is now open for CHIIR 2021!</strong> All registrations include tutorials; the main conference including technical sessions, poster sessions, keynotes, panel, and social events; and workshops. You can register via the <a href="https://cvent.me/Egz53m">dedicated registration page</a>.</p>
+                  <!-- <iframe src="https://calendar.google.com/calendar/embed?height=600&amp;wkst=1&amp;bgcolor=%23ffffff&amp;ctz=UTC&amp;src=cnBuM2pzOWNnOGc5MXYxYmE3bmprcjcwdWtAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&amp;color=%23C0CA33&amp;mode=WEEK&amp;hl=en_GB&amp;showCalendars=0&amp;showTabs=0&amp;dates=20210314%2f20210320" style="border-width:0" width="100%" height="800" frameborder="0" scrolling="no"></iframe> -->
+
+                  <p style="background: #FFCD00"><strong>Registration is now open for CHIIR 2021!</strong> All registrations include tutorials; the main conference including technical sessions, poster sessions, keynotes, panel, and social events; and workshops. You can register via the <a href="https://cvent.me/Egz53m">dedicated registration page</a>.</p>
 
                   <p>We have received some reports of confirmation email going to "junk" folders, so please check there if your confirmation is missing.</p>
 
                   <h3>Schedule</h3>
 
-                  <p>We will have an interactive CHIIR schedule online soon; here is an overview. Almost everything is in your timezone!</p>
+                  <p>Almost everything is in your timezone! The schedule below is in your local time (or whatever your browser thinks that your local time is). If you prefer, there's <a href="img/schedule-20210128.png">a static version</a> also available to print, use as your desktop picture, or just admire.</p>
 
-                  <p><a href="img/schedule-20210128.png"><img width="100%" src="img/schedule-20210128.png"/></a></p>
+                  <div id='calendar'></div>
 
-                  <h3>Student Grants</h3>
+                  <!--<h3>Student Grants</h3>
 
                   <p>
-                  	The SIGIR Students Travel Grant program will cover the cost of <b>registration</b> for any student author presenting a full, perspective, short, demo, resources, or DC paper at CHIIR 2021.</p>
+                      The SIGIR Students Travel Grant program will cover the cost of <b>registration</b> for any student author presenting a full, perspective, short, demo, resources, or DC paper at CHIIR 2021.
+                  </p>
 
- 					<p>To be eligible, the student must:
- 					<ol>
- 						<li>be an author or co-author of a paper;</li>
- 						<li>be the one presenting the work at the conference; and</li>
- 						<li>complete the following application form:
- 							<a href="https://unc.az1.qualtrics.com/jfe/form/SV_eKA63O0WdHuCGYR?conference=CHIIR2021" target="_blank">https://unc.az1.qualtrics.com/jfe/form/SV_eKA63O0WdHuCGYR?conference=CHIIR2021</a></li>
- 					</ol>
- 					</p>
+                  <p>
+                      To be eligible, the student must:
+                      <ol>
+                          <li>be an author or co-author of a paper;</li>
+                          <li>be the one presenting the work at the conference; and</li>
+                          <li>
+                              complete the following application form:
+                              <a href="https://unc.az1.qualtrics.com/jfe/form/SV_eKA63O0WdHuCGYR?conference=CHIIR2021" target="_blank">https://unc.az1.qualtrics.com/jfe/form/SV_eKA63O0WdHuCGYR?conference=CHIIR2021</a>
+                          </li>
+                      </ol>
+                  </p>
 
- 					<p>IMPORTANT: The application form will expire on <b>31 December 2020 (AOE)</b>.</p>
-                  
-                  
+                  <p>IMPORTANT: The application form will expire on <b>31 December 2020 (AOE)</b>.</p>-->
 
-                  
+
+
+
 
               </div><!--/.col-xs-6.col-lg-4-->
 
