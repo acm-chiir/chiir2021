@@ -43,6 +43,12 @@
                     day: 'numeric',
                     month: 'short'
                 },
+                slotLabelFormat: {
+                    hour: '2-digit',
+                    minute: '2-digit',
+                    hour12: false,
+                    meridiem: false
+                },
                 googleCalendarApiKey: 'AIzaSyDnQMqoRUsesESMph4J0krHSWZ6D45o1BA',
                 events: {
                     googleCalendarId: 'rpn3js9cg8g91v1ba7njkr70uk@group.calendar.google.com'
@@ -57,10 +63,44 @@
                 },
                 eventClick: function (info) {
                     info.jsEvent.preventDefault();
+                },
+                eventDidMount: function (info) {
+                    var title = info.event.title;
+                    if (/poster|boaster|papers/.test(title)) {
+                        info.el.style.backgroundColor = "#b6b6b6";
+                        info.el.style.border = "thin solid gray";
+                    }
+                    else if (/social/.test(title)) {
+                        info.el.style.backgroundColor = "lightblue";
+                        info.el.style.border = "thin solid blue";
+                    }
+                    else if (/welcome|2021 closing|business/.test(title)) {
+                        info.el.style.backgroundColor = "#fbb917";
+                        info.el.style.border = "thin solid #fbb117";
+                    }
+                    else if (/keynote|panel/.test(title)) {
+                        info.el.style.backgroundColor = "#ffcba4";
+                        info.el.style.border = "thin solid #f2bb66";
+                    };
+                    $(info.el).hover(
+                        function () {
+                            var t = info.event.title;
+                            var d = info.event.extendedProps["description"] || "";
+                            var textToShow = "<strong>" + t + "</strong><br/>" + d;
+                            $("#calendar-tooltip").html(textToShow).show();
+                        },
+                        function () {
+                            $("#calendar-tooltip").hide();
+                        }).mousemove(function (e) {
+                            var mousex = (e.pageX + 5) + 'px';
+                            var mousey = (e.pageY + 5) + 'px';
+                            $("#calendar-tooltip").css({ top: mousey, left: mousex })
+                        });
+//                    info.el.tooltip(text = info.event.title);
                 }
             });
             calendar.render();
-
+            
             var timezoneString = /\((.*)\)/.exec(new Date().toString())[1];
             if (timezoneString) {
                 timezoneEl.innerHTML = ": " + timezoneString;
@@ -115,27 +155,35 @@
 
                   <p>You can see almost everything, no matter where you are! The schedule below is in your local time (or whatever your browser thinks that your local time is<span id="timezone"></span>). If you prefer, there's <a href="img/schedule-20210128.png">a static version</a> also available to print, use as your desktop picture, or just admire.</p>
 
-                  <div id='calendar'></div>
+                  <div id="calendar"></div>
+
+                  <h3 id="grants">Carers' Grants</h3>
+
+                  <p>CHIIR 2021 is pleased to offer carers' grants, to help where caring responsibilities&mdash;for example, childcare or healthcare&mdash;would otherwise limit your participation in the conference.</p>
+
+                  <p>These grants are intended to cover extra costs for caring for dependents during the conference. To apply, please <a href="https://forms.office.com/Pages/ResponsePage.aspx?id=v4j5cvGGr0GRqy180BHbR12DuAN8j5dDv0MYQ5m-un1UMk4yRUE5QzUzVUtQNjdORzhCMTFQN1RMSC4u">fill up this form</a> and let us know a fair estimate of your costs as well as how you arrived at that estimate. For example, you may want to use the average hourly rate for childcare where you live. We will acknowledge all applications. The <strong>deadline for application is 15 February</strong>, anywhere on earth, and we will let you know the outcome as soon as possible after that date.</p>
+
+                  <p><i>Some further guidelines:</i> We will, of course, keep all applications and their contents confidential, and only use your information to allocate grants. We will, however, give the ACM a list of successful applicants, so we can arrange payment. Grants will be reimbursements (i.e. you will have to cover the cost up front, and you will be repaid) and we will require receipts for the expenses you claim. You can apply for funding before registering for CHIIR, but must register for the conference to receive any reimbursement.</p>
 
                   <!--<h3>Student Grants</h3>
 
-                  <p>
-                      The SIGIR Students Travel Grant program will cover the cost of <b>registration</b> for any student author presenting a full, perspective, short, demo, resources, or DC paper at CHIIR 2021.
-                  </p>
+    <p>
+        The SIGIR Students Travel Grant program will cover the cost of <b>registration</b> for any student author presenting a full, perspective, short, demo, resources, or DC paper at CHIIR 2021.
+    </p>
 
-                  <p>
-                      To be eligible, the student must:
-                      <ol>
-                          <li>be an author or co-author of a paper;</li>
-                          <li>be the one presenting the work at the conference; and</li>
-                          <li>
-                              complete the following application form:
-                              <a href="https://unc.az1.qualtrics.com/jfe/form/SV_eKA63O0WdHuCGYR?conference=CHIIR2021" target="_blank">https://unc.az1.qualtrics.com/jfe/form/SV_eKA63O0WdHuCGYR?conference=CHIIR2021</a>
-                          </li>
-                      </ol>
-                  </p>
+    <p>
+        To be eligible, the student must:
+        <ol>
+            <li>be an author or co-author of a paper;</li>
+            <li>be the one presenting the work at the conference; and</li>
+            <li>
+                complete the following application form:
+                <a href="https://unc.az1.qualtrics.com/jfe/form/SV_eKA63O0WdHuCGYR?conference=CHIIR2021" target="_blank">https://unc.az1.qualtrics.com/jfe/form/SV_eKA63O0WdHuCGYR?conference=CHIIR2021</a>
+            </li>
+        </ol>
+    </p>
 
-                  <p>IMPORTANT: The application form will expire on <b>31 December 2020 (AOE)</b>.</p>-->
+    <p>IMPORTANT: The application form will expire on <b>31 December 2020 (AOE)</b>.</p>-->
 
 
 
@@ -168,4 +216,4 @@
     <script src="js/offcanvas.js"></script>
 
 
-</body></html>
+    <div id="calendar-tooltip" style="display: none; position: absolute; border: 1px solid #333; background-color: #d1d1d1; border-radius: 0px 3px 0px 3px; padding: 2px; color: #000; font-size: smaller; z-index: 1; max-width: 30em"></div></body></html>
